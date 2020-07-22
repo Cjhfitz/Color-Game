@@ -62,7 +62,7 @@ function generateRGB(numColors) {
 
 function generateSquares() {
     for(let i = 0; i < squares.length; i++) {
-        squares[i].style.background = rgbVals[i];
+        squares[i].style.backgroundColor = rgbVals[i];
     }
 }
 
@@ -71,7 +71,7 @@ let display = document.querySelector("#display");
 function makeChoice() {
     for(let i = 0; i < squares.length; i++) {
         squares[i].addEventListener("click", function() {
-            if(squares[i].style.background === h1.textContent) {
+            if(squares[i].style.backgroundColor === h1.textContent) {
                 display.textContent = "Correct";
             }
             else {
