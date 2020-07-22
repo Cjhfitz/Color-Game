@@ -1,0 +1,10 @@
+.square {
+    width: 200px;
+    height: 200px;
+    /* background: #343a40; */
+    border-radius: 30px;
+}
+
+html, body {
+    height: 100%;
+  }
