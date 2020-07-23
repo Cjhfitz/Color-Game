@@ -76,6 +76,7 @@ function makeChoice() {
             }
             else {
                 display.textContent = "Try Again";
+                this.style.backgroundColor = "#343a40"
             }
         });
     }
