@@ -1,5 +1,7 @@
 .square {
-    height: 200px;
+    width: 25%;
+    padding-bottom: 25%;
+    /* height: 200px; */
     /* background: #343a40; */
     border-radius: 30px;
 }
