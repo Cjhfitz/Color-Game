@@ -7,10 +7,7 @@ let h1 = document.querySelector("h1");
 let squares = document.querySelectorAll(".square");
 let modeButtons = document.querySelectorAll(".mode");
 
-h1.textContent = rgbVals[getRandomInt(rgbVals.length)];
-
-generateSquares();
-makeChoice();
+reset();
 
 
 for(let i = 0; i < modeButtons.length; i++) {
@@ -73,7 +70,8 @@ function makeChoice() {
 
 function reset() {
     rgbVals = generateSquareColor(numSquares);
-    h1.textContent = rgbVals[getRandomInt(rgbVals.length)];
     generateSquares(numSquares);
+    makeChoice();
+    h1.textContent = rgbVals[getRandomInt(rgbVals.length)];
     display.textContent = "";
 }
