@@ -9,7 +9,7 @@ let modeButtons = document.querySelectorAll(".mode");
 
 reset();
 
-
+// mode button setup
 for(let i = 0; i < modeButtons.length; i++) {
     modeButtons[i].addEventListener("click", function() {
         if(modeButtons[i].textContent.toLowerCase() === "easy") {
