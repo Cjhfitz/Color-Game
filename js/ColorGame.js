@@ -1,7 +1,7 @@
-
 let numSquares = 6;
-let rgbVals = generateSquareColor(numSquares);
 let difficulty = "hard";
+let pickedColor = ""
+let rgbVals = generateSquareColor(numSquares);
 let display = document.querySelector("#display");
 let h1 = document.querySelector("h1");
 let squares = document.querySelectorAll(".square");
@@ -54,11 +54,14 @@ function generateSquares(numSquares) {
     }
 }
 
-function makeChoice() {
+function setupChoices() {
     for(let i = 0; i < squares.length; i++) {
         squares[i].addEventListener("click", function() {
-            if(squares[i].style.backgroundColor === h1.textContent) {
+            if(squares[i].style.backgroundColor === pickedColor) {
                 display.textContent = "Correct";
+                squares.forEach(square => {
+                    square.style.backgroundColor = pickedColor;
+                });
             }
             else {
                 display.textContent = "Try Again";
@@ -71,7 +74,8 @@ function makeChoice() {
 function reset() {
     rgbVals = generateSquareColor(numSquares);
     generateSquares(numSquares);
-    makeChoice();
-    h1.textContent = rgbVals[getRandomInt(rgbVals.length)];
+    setupChoices();
+    pickedColor = rgbVals[getRandomInt(rgbVals.length)];
+    h1.textContent = pickedColor;
     display.textContent = "";
 }
