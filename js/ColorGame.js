@@ -62,6 +62,10 @@ function setupChoices() {
                 squares.forEach(square => {
                     square.style.backgroundColor = pickedColor;
                 });
+                document.querySelector("#myJumbo").classList.remove("bg-info");
+                document.querySelector("#myJumbo").classList.add("correct-jumotron");
+                document.querySelector("#myJumbo").style.backgroundColor = pickedColor;
+
             }
             else {
                 display.textContent = "Try Again";
